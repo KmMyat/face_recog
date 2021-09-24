@@ -96,12 +96,12 @@ with col3:
     st.write("")
     
 if starting == True:
-    col1,col2,col3 = st.colums([1,2,1])
-    with col1:
+    col4,col5,col6 = st.colums([1,2,1])
+    with col4:
         st.write('')
-    with col2:
+    with col5:
         st.write("Predicted as","**_",dictionary[label],"_**")
-    with col3:
+    with col6:
         st.write('')
 st.write("")
 
