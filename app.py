@@ -103,10 +103,13 @@ if starting == True:
         st.write("Predicted as","**_",dictionary[label],"_**")
     with col6:
         st.write('')
-st.write("")
+        
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write(
+            """_This project is created as a AI-course pritical project by team `Clover`_."""
+        )
 
-st.write(
-         """_This project is created as a AI-course pritical project by team `Clover`_."""
-      )
 
 
