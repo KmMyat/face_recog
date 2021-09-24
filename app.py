@@ -34,6 +34,8 @@ with st.sidebar:
                         
     img_file = st.selectbox("Choose any one image", template_dirs['dir'])
     st.sidebar.title("Note")
+    
+    starting = st.button('predict')
     st.sidebar.write(
         """Playing with the options in Selectbox, you will find _images of Four Famous-Person_ exist in this
         model.The second Selectbox includes twenty test images of those people. You can test each person's images by choosing the avaliable options
@@ -82,7 +84,7 @@ images = np.vstack([x])
 classes = model_file.predict(x)
 y_classes=classes.argmax(axis=-1)
 label = y_classes[0]#9
-starting = st.button('predict')
+
 
 with col3:
     st.write("")
