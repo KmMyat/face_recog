@@ -65,35 +65,36 @@ template ='templates'
 real_path = os.path.join(work_dir ,template,option,img_file)
 img = tf.keras.preprocessing.image.load_img(real_path, target_size=(160,160))
 
-starting = st.button('Predict')
-if starting == True:
-    col1, col2, col3 = st.columns([1,2,1])
+col1, col2, col3 = st.columns([1,2,1])
+with col1:
+    st.write("")
 
-    with col1:
-        st.write("")
-
-    with col2:
-        st.image(tf.keras.preprocessing.image.load_img(real_path),width=250)
+with col2:
+    st.image(tf.keras.preprocessing.image.load_img(real_path),width=250)
 
 
     # st.image(tf.keras.preprocessing.image.load_img(real_path),width=250)
-        dictionary = {0:'Daw Aung San SuuKyi',1:'Jackie Chan',2:'Messi',3:'Barack Obama'}
-        x = tf.keras.preprocessing.image.img_to_array(img)
-        x = np.expand_dims(x,axis=0)
-        x /= 255.0
-        images = np.vstack([x])
-        classes = model_file.predict(x)
-        y_classes=classes.argmax(axis=-1)
-        label = y_classes[0]#9
-        st.write("Predicted as","**_",dictionary[label],"_**")
+dictionary = {0:'Daw Aung San SuuKyi',1:'Jackie Chan',2:'Messi',3:'Barack Obama'}
+x = tf.keras.preprocessing.image.img_to_array(img)
+x = np.expand_dims(x,axis=0)
+x /= 255.0
+images = np.vstack([x])
+classes = model_file.predict(x)
+y_classes=classes.argmax(axis=-1)
+label = y_classes[0]#9
+starting = st.button('predict')
 
-    with col3:
-        st.write("")
+with col3:
+    
+if starting == True:
+    st.write("Predicted as","**_",dictionary[label],"_**")
+st.write("")
 
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write(
-            """_This project is created as a AI-course pritical project by team `Clover`_."""
-        )
+st.write("")
+st.write("")
+st.write("")
+st.write(
+         """_This project is created as a AI-course pritical project by team `Clover`_."""
+      )
+
 
