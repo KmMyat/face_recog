@@ -34,7 +34,13 @@ with st.sidebar:
                         
     img_file = st.selectbox("Choose any one image", template_dirs['dir'])
     
-    starting = st.button('predict')
+    col1,col2,col3 = st.sidebar.columns([1,2,1])
+    with col1:
+        st.write('')
+    with col2:
+        starting = st.button('predict')
+    with col3:
+        st.write('')
     
     st.sidebar.write(' ')
     st.sidebar.title("Note")
