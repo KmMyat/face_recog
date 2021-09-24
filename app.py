@@ -96,7 +96,13 @@ with col3:
     st.write("")
     
 if starting == True:
-    st.write("Predicted as","**_",dictionary[label],"_**")
+    col1,col2,col3 = st.colums([1,2,1])
+    with col1:
+        st.write('')
+    with col2:
+        st.write("Predicted as","**_",dictionary[label],"_**")
+    with col3:
+        st.write('')
 st.write("")
 
 st.write(
