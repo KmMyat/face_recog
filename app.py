@@ -96,7 +96,7 @@ with col3:
     st.write("")
     
 if starting == True:
-    col4,col5,col6 = st.colums([1,2,1])
+    col4,col5,col6 = st.columns([1,2,1])
     with col4:
         st.write('')
     with col5:
