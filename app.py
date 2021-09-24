@@ -85,14 +85,14 @@ label = y_classes[0]#9
 starting = st.button('predict')
 
 with col3:
+    st.write("")
+    st.write("")
+    st.write("")
     
 if starting == True:
     st.write("Predicted as","**_",dictionary[label],"_**")
 st.write("")
 
-st.write("")
-st.write("")
-st.write("")
 st.write(
          """_This project is created as a AI-course pritical project by team `Clover`_."""
       )
