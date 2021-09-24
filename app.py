@@ -33,9 +33,13 @@ with st.sidebar:
     load_img(option)
                         
     img_file = st.selectbox("Choose any one image", template_dirs['dir'])
-    st.sidebar.title("Note")
     
     starting = st.button('predict')
+    
+    st.sidebar.write(' ')
+    st.sidebar.title("Note")
+    
+    
     st.sidebar.write(
         """Playing with the options in Selectbox, you will find _images of Four Famous-Person_ exist in this
         model.The second Selectbox includes twenty test images of those people. You can test each person's images by choosing the avaliable options
