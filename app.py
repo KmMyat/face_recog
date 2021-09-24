@@ -34,7 +34,7 @@ with st.sidebar:
                         
     img_file = st.selectbox("Choose any one image", template_dirs['dir'])
     
-    col1,col2,col3 = st.sidebar.columns([1,2,1])
+    col1,col2,col3 = st.sidebar.columns([1,1,1])
     with col1:
         st.write('')
     with col2:
