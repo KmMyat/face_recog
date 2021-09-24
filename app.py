@@ -65,6 +65,8 @@ template ='templates'
 real_path = os.path.join(work_dir ,template,option,img_file)
 img = tf.keras.preprocessing.image.load_img(real_path, target_size=(160,160))
 
+starting = st.button('Predict')
+
 col1, col2, col3 = st.columns([1,2,1])
 
 with col1:
