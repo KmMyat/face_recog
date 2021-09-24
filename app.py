@@ -100,11 +100,11 @@ if starting == True:
     with col4:
         st.write('')
     with col5:
+        st.write('')
         st.write("Predicted as","**_",dictionary[label],"_**")
     with col6:
         st.write('')
         
-    st.write("")
     st.write("")
     st.write("")
 st.write(
